@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,7 +12,7 @@
   </head>
   <body>
     <!-- Transparent Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
       <div class="container">
         <a class="navbar-brand text-white" href="/"><i class="fa-solid fa-fish"></i> Fresh Test</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -21,19 +21,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
-              <a class="nav-link text-white" href="/">Acceuil</a>
+              <a class="nav-link text-white" href="/">Accueil</a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link text-white" href="#">À propos</a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link text-white" href="#">Kit fraîcheur</a>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Contactez nous</a>
+              <a class="nav-link text-white" href="#">Contactez-nous</a>
             </li>
           </ul>
         </div>
@@ -42,10 +39,12 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-      <video autoplay muted loop playsinline id="bg-video">
-        <source src="video/hero-1080p.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="ratio ratio-16x9">
+        <video autoplay muted loop playsinline>
+          <source src="video/hero-1080p.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1>Bienvenue sur notre plateforme dédiée au test de la fraîcheur du poisson <i class="fa-solid fa-fish"></i></h1>
@@ -70,11 +69,18 @@
       <!-- Avantages nutritionnels -->
       <section class="container mt-5">
         <h2>Pourquoi la fraîcheur est essentielle</h2>
-        <p>
-          Le poisson est une source exceptionnelle de protéines de haute qualité, d’acides gras oméga‑3, de vitamines et de minéraux. Mais sa valeur nutritionnelle et son goût dépendent directement de sa fraîcheur. Dès la capture, l’ATP musculaire se
-          dégrade : l’IMP, responsable du goût de poisson ultra‑frais, se transforme en inosine puis en hypoxanthine, à l’origine de l’amertume des produits altérés.
-        </p>
-        <p>Le <strong>PRECICE® Freshness Assay Kit</strong> permet de mesurer ces composés en moins de 90 minutes, offrant un indicateur objectif et fiable de la qualité, même pour les produits cuits, surgelés ou transformés.</p>
+        <div class="row">
+          <div class="col-lg-9">
+            <p>
+              Les produits de la mer sont des produits diététiques, sources reconnues de protéines, d’oméga-3, de minéraux et de vitamine B12. Leur chair contient peu de collagène et est très digeste. Mais ce sont aussi des produits très fragiles qui
+              perdent vite leurs qualités gustatives.
+            </p>
+            <p></p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <img src="img/cabillaud.jpg" alt="Cabillaud sauvage" title="Cabillaud sauvage" class="img-thumbnail" loading="lazy" />
+          </div>
+        </div>
       </section>
 
       <!-- Nos Services -->
@@ -93,14 +99,14 @@
       <section class="container mt-5 mb-5 pt-5">
         <h2 class="text-center mb-5">Ils utilisent déjà notre kit</h2>
         <div class="row justify-content-center text-center">
-          <div class="col-lg-4 text-center">
-            <img src="img/logo-scapmaree.png" class="rounded-circle shadow mb-3" alt="Scap Marée" width="140" height="140" />
+          <div class="col-lg-4">
+            <img src="img/logo-scapmaree.png" class="rounded-circle shadow mb-3" alt="Logo de Scap Marée" width="140" height="140" loading="lazy" />
             <h3 class="fw-normal">Scap Marée</h3>
             <p>Coopérative d’approvisionnement des produits de la mer et d’eau douce du Mouvement Leclerc, propose 2600 références dont 700 à l’offre quotidienne et livre 600 magasins chaque jour via 13 plates-formes.</p>
           </div>
 
-          <div class="col-lg-4 text-center">
-            <img src="img/logo-aquimer.png" class="rounded-circle shadow mb-3" alt="aquimer" width="140" height="140" />
+          <div class="col-lg-4">
+            <img src="img/logo-aquimer.png" class="rounded-circle shadow mb-3" alt="Logo d’Aquimer" width="140" height="140" loading="lazy" />
             <h3 class="fw-normal">Aquimer</h3>
             <p>
               AQUIMER accompagne les entreprises dans leurs projets d’innovation et de développement (recherche de partenaires scientifiques, techniques, industriels… jusqu’à l’obtention de financements et la mise sur le marché des nouveaux produits,
@@ -108,8 +114,8 @@
             </p>
           </div>
 
-          <div class="col-lg-4 text-center">
-            <img src="img/logo-delanchy.png" class="rounded-circle shadow mb-3" alt="Delanchy" width="140" height="140" />
+          <div class="col-lg-4">
+            <img src="img/logo-delanchy.png" class="rounded-circle shadow mb-3" alt="Logo de Delanchy" width="140" height="140" loading="lazy" />
             <h3 class="fw-normal">Delanchy</h3>
             <p>DELANCHY est un acteur majeur de la distribution de produits de la mer, s'engageant à garantir la qualité et la fraîcheur de ses produits grâce à des méthodes de contrôle rigoureuses.</p>
           </div>
@@ -117,8 +123,8 @@
       </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
