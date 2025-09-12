@@ -1,15 +1,18 @@
-window.addEventListener("scroll", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar")
   const heroSection = document.querySelector(".hero-section")
 
-  // Get the height of the hero section
+  if (!navbar || !heroSection) return
+
   const heroHeight = heroSection.offsetHeight
 
-  if (window.scrollY > heroHeight - 50) {
-    navbar.classList.add("bg-dark", "navbar-dark")
-    navbar.classList.remove("navbar-light")
-  } else {
-    navbar.classList.remove("bg-dark", "navbar-dark")
-    navbar.classList.add("navbar-light")
-  }
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > heroHeight - 50) {
+      navbar.classList.add("bg-dark")
+      navbar.classList.remove("bg-transparent")
+    } else {
+      navbar.classList.remove("bg-dark")
+      navbar.classList.add("bg-transparent")
+    }
+  })
 })
