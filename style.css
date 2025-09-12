@@ -5,7 +5,11 @@
   overflow: hidden;
 }
 
-#bg-video {
+.hero-section .ratio {
+  height: 100%;
+}
+
+.hero-section video {
   position: absolute;
   top: 0;
   left: 0;
@@ -40,6 +44,14 @@
 }
 
 @media (max-width: 991.98px) {
+  .hero-section {
+    height: 100vh;
+  }
+  
+  .hero-section .ratio {
+    --bs-aspect-ratio: 100%;
+  }
+  
   .navbar-collapse {
     margin-top: 0.4rem;
     background-color: rgba(0, 0, 0, 0.85); /* semi-transparent dark overlay */
