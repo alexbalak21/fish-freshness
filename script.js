@@ -22,7 +22,8 @@ function throttle(func, limit) {
 
 function updateNavbar() {
   const navbar = document.querySelector(".navbar");
-  const heroSection = document.querySelector(".hero-section");
+  // Try to find hero section by ID first, then by class
+  let heroSection = document.getElementById("hero") || document.querySelector(".hero");
   
   if (!navbar || !heroSection) return;
   
